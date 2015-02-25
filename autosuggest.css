@@ -1,3 +1,7 @@
+/**
+ * For legacy browsers.
+ */
+
 [hidden] { display: none; }
 
 div.awesuggest {
@@ -16,8 +20,8 @@ div.awesuggest > ul.selections {
     background-color: #fff;
 
     -webkit-box-shadow:inset 0 1px 2px #888888;
-       -moz-box-shadow:inset 0 1px 2px #888888;
-            box-shadow:inset 0 1px 2px #888888;
+    -moz-box-shadow:inset 0 1px 2px #888888;
+    box-shadow:inset 0 1px 2px #888888;
 
     list-style-type: none;
     overflow: auto;
@@ -32,11 +36,12 @@ div.awesuggest > ul.selections > li {
     border-top-color: #c0d9e9;
 
     -webkit-border-radius: 12px;
-       -moz-border-radius: 12px;
-            border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
 
     background-color: #ddeefe;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ddeefe), to(#bfe0f1));
+    background-image: linear-gradient(#ddeefe, #bfe0f1);
+
 
     color: #2b3840;
     font-size: 13px;
@@ -44,8 +49,8 @@ div.awesuggest > ul.selections > li {
     text-shadow: 0 1px 1px #fff;
 
     -webkit-box-shadow: 0 1px 1px #e4edf2;
-       -moz-box-shadow: 0 1px 1px #e4edf2;
-            box-shadow: 0 1px 1px #e4edf2;
+    -moz-box-shadow: 0 1px 1px #e4edf2;
+    box-shadow: 0 1px 1px #e4edf2;
 }
 
 div.awesuggest > ul.selections >  li.blur {
@@ -53,13 +58,13 @@ div.awesuggest > ul.selections >  li.blur {
     border-top-color: #cccccc;
 
     background-color: #f4f4f4;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4f4f4), to(#d5d5d5));
+    background-image: linear-gradient(#f4f4f4, #d5d5d5);
 
     color: #666666;
 
     -webkit-box-shadow: 0 1px 1px #e9e9e9;
-       -moz-box-shadow: 0 1px 1px #e9e9e9;
-            box-shadow: 0 1px 1px #e9e9e9;
+    -moz-box-shadow: 0 1px 1px #e9e9e9;
+    box-shadow: 0 1px 1px #e9e9e9;
 }
 
 div.awesuggest > ul.selections > li > a.close {
@@ -88,7 +93,7 @@ div.awesuggest > ul.selections > li[aria-selected="true"] {
     border-top-color: #8bb7ed;
 
     background-color: #bbd4f1;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bbd4f1), to(#a3c2e5));
+    background-image: linear-gradient(#bbd4f1, #a3c2e5);
 
     color: #2b3840;
 }
@@ -122,6 +127,7 @@ div.awesuggest > ul.selections > li.inputWrapper > input {
     border: none;
     font-size: 13px;
     outline: none;
+    box-shadow: none;
 }
 
 div.awesuggest > ul.suggestions {
@@ -131,8 +137,8 @@ div.awesuggest > ul.suggestions {
     padding: 0;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 
     background-color: #fff;
     background-color: rgba(255,255,255,0.95);
@@ -144,8 +150,8 @@ div.awesuggest > ul.suggestions {
     list-style-type: none;
 
     -webkit-box-shadow: 0 2px 12px #222;
-       -moz-box-shadow: 0 2px 12px #222;
-            box-shadow: 0 2px 12px #222;
+    -moz-box-shadow: 0 2px 12px #222;
+    box-shadow: 0 2px 12px #222;
 }
 
 div.awesuggest > ul.suggestions > li {
@@ -156,8 +162,8 @@ div.awesuggest > ul.suggestions > li {
     border-bottom-color: #dddddd;
 
     -webkit-border-radius: 5px;
-       -moz-border-radius: 5px;
-            border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 
     background-color: transparent;
 
@@ -172,7 +178,7 @@ div.awesuggest > ul.suggestions > li:hover,
 div.awesuggest > ul.suggestions > li[aria-selected="true"] {
     border-color: #3342e8;
     background-color: #3668d9;
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 64%, from(rgb(110, 129, 245)), to(rgb(62, 82, 242)));
+    background-image: linear-gradient(rgb(110, 129, 245), rgb(62, 82, 242));
     color: #fff;
     text-shadow: 0 1px 2px #122042;
 }
