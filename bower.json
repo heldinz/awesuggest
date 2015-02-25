@@ -1,18 +1,24 @@
 {
-  "name": "awesomplete",
+  "name": "awesuggest",
   "main": [
-    "./awesomplete.css",
-    "./awesomplete.js"
+    "./autosuggest.css",
+    "./awesuggest.css",
+    "./awesuggest.js"
   ],
   "version": "0.0.0",
-  "homepage": "https://github.com/LeaVerou/awesomplete",
+  "homepage": "https://github.com/heldinz/awesuggest",
   "authors": [
-    "Lea Verou <>"
+    "Lea Verou <>",
+    "Drew Wilson <>",
+    "Alice Rose <heldinz@posteo.de>"
   ],
-  "description": "Ultra lightweight, usable autocomplete with zero dependencies.",
+  "description": "AutoSuggest plugin for Prototype, supporting older browsers and multiple keywords. Munge of Lea Verou's Awesomplete with Drew Wilson's jQuery AutoSuggest plugin.",
   "keywords": [
     "autocomplete",
-    "lightweight"
+    "lightweight",
+    "keywords",
+    "prototype",
+    "autosuggest"
   ],
   "license": "MIT"
 }
