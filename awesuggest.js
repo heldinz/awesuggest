@@ -82,10 +82,11 @@
                 else {
                     list = $(list);
 
-                    if (list && list.children) {
-                        me._list = [].slice.apply(list.children).map(function (el) {
-                            return el.innerHTML.trim();
-                        });
+                    if (list && list.childElements()) {
+                        me._list = [].slice.apply(list.childElements());
+                        for (var i=0; i<me._list.length; i++) {
+                            me._list[i] = me._list[i].innerHTML;
+                        }
                     }
                 }
             }
@@ -140,7 +141,7 @@
         this.maxItems = +input.readAttribute("data-maxitems") || o.maxItems || false;
 
         if (input.hasAttribute("list")) {
-            this.list = "#" + input.readAttribute("list");
+            this.list = input.readAttribute("list");
             input.removeAttribute("list");
         }
         else {
