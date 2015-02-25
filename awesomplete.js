@@ -400,10 +400,6 @@
         return RegExp(regEscape(input.trim()), "i").test(text);
     };
 
-    _.FILTER_STARTSWITH = function (text, input) {
-        return RegExp("^" + regEscape(input.trim()), "i").test(text);
-    };
-
     function regEscape(s) { return s.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&"); }
 
     function getValsAsArray (values) {
@@ -428,7 +424,7 @@
     }
     else {
         // Wait for it
-        document.observe("DOMContentLoaded", init);
+        Event.observe(window, "load", init);
     }
 
     _.$ = $;
