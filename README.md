@@ -17,17 +17,17 @@ Before you try anything, you need to ensure that Prototype is loaded on the page
 If you do happen to be using a more modern browser, a stylesheet incorporating Awesomplete styles is also available:
 
 ```html
-<link rel="stylesheet" href="autosuggest.css" />
+<link rel="stylesheet" href="awesomplete.css" />
 ```
 
-Then you can add an awesuggest widget by adding the following input tag:
+Then you can add an Awesuggest widget by adding the following input tag:
 
 ```html
 <input class="awesuggest"
        data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" />
 ```
 
-Add class="awesuggest" for it to be automatically processed (you can still specify many options via HTML attributes)
+Add `class="awesuggest"` for it to be automatically processed (you can still specify many options via HTML attributes).
 Otherwise you can instantiate with a few lines of JS code, which allow for more customization.
 
 There are many ways to link an input to a list of suggestions.
@@ -46,7 +46,7 @@ The simple example above could have also been made with the following markup, wh
 </datalist>
 ```
 
-Or the following, if you don’t want to use a <datalist>, or if you don’t want to use IDs (since any selector will work in data-list):
+Or the following, if you don’t want to use a `<datalist>`, or if you don’t want to use IDs (since any selector will work in data-list):
 
 ```html
 <input class="awesuggest" data-list="#mylist" />
@@ -72,7 +72,7 @@ details.
 
 The official site for the library is at <http://heldinz.github.io/awesuggest/>.
 
-Created by Alice Rose, piggybacking off Lea Verou, Drew Wilson and other fantastic contributors.
+Munged together by Alice Rose, piggybacking off Lea Verou, Drew Wilson and other fantastic contributors.
 
 Awesomplete can be found at <http://leaverou.github.io/awesomplete/>.
 
