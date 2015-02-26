@@ -1,0 +1,182 @@
+/**
+ * For modern browsers only.
+ */
+
+[hidden] { display: none; }
+
+div.awesuggest {
+    display: inline-block;
+    position: relative;
+}
+
+div.awesuggest > input {
+    display: block;
+}
+
+div.awesuggest li {
+    margin-left: 0;
+}
+
+div.awesuggest > ul.selections {
+    margin: 0;
+    padding: 0.5em;
+
+    border: 1px solid #aaaaaa;
+    background-color: white;
+    box-shadow:inset 0 1px 2px #888888;
+
+    list-style: none;
+    overflow: auto;
+}
+
+div.awesuggest > ul.selections > li {
+    float: left;
+    margin: 0.2em 0.4em 0.2em 0;
+    padding: 0.3em 0.8em;
+
+    border: 1px solid #acc3ec;
+    border-radius: 1em;
+
+    background: #ddeefe;
+    background: linear-gradient(#ddeefe, #bfe0f1);
+
+    color: #2b3840;
+    text-shadow: 0 1px 1px #fff;
+    box-shadow: 0 1px 1px #e4edf2;
+}
+
+div.awesuggest > ul.selections a.close {
+    float: right;
+    margin: 0.1em 0 0 0.3em;
+    padding: 0 0.2em;
+
+    color: #5491be;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #fff;
+
+    cursor: pointer;
+}
+
+div.awesuggest > ul.selections > li:hover,
+div.awesuggest > ul.selections > li[aria-selected="true"] {
+    border-color: #6da0e0;
+
+    background: #bbd4f1;
+    background: linear-gradient(#bbd4f1, #a3c2e5);
+
+    color: #2b3840;
+}
+
+div.awesuggest > ul.selections > li:hover > a.close {
+    color: #4d70b0;
+}
+
+div.awesuggest > ul.selections > li.selected {
+    border-color: #1f30e4;
+}
+
+div.awesuggest > ul.selections a:hover.close {
+    color: #1b3c65;
+}
+
+div.awesuggest > ul.selections a:active.close {
+    color: #4d70b0;
+}
+
+div.awesuggest > ul.selections > li.inputWrapper {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+div.awesuggest > ul.selections > li.inputWrapper > input {
+    width: 120px;
+    height: 18px;
+    padding-top: 3px;
+    border: none;
+    font-size: 13px;
+    outline: none;
+}
+
+div.awesuggest > ul.suggestions {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    min-width: 100%;
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    border-radius: .3em;
+    margin: .2em 0 0;
+    background: hsla(0,0%,100%,.9);
+    background: linear-gradient(to bottom right, white, hsla(0,0%,100%,.8));
+    border: 1px solid rgba(0,0,0,.3);
+    box-shadow: .05em .2em .6em rgba(0,0,0,.2);
+    text-shadow: none;
+}
+
+div.awesuggest > ul.suggestions[hidden],
+div.awesuggest > ul.suggestions:empty {
+    display: none;
+}
+
+@supports (transform: scale(0)) {
+    div.awesuggest > ul.suggestions {
+        transition: .3s cubic-bezier(.4,.2,.5,1.4);
+        transform-origin: 1.43em -.43em;
+    }
+
+    div.awesuggest > ul.suggestions[hidden],
+    div.awesuggest > ul.suggestions:empty {
+        opacity: 0;
+        transform: scale(0);
+        display: block;
+        transition-timing-function: ease;
+    }
+}
+
+/* Pointer */
+div.awesuggest > ul.suggestions:before {
+    content: "";
+    position: absolute;
+    top: -.43em;
+    left: 1em;
+    width: 0; height: 0;
+    padding: .4em;
+    background: white;
+    border: inherit;
+    border-right: 0;
+    border-bottom: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+div.awesuggest > ul.suggestions > li {
+    position: relative;
+    padding: .2em .5em;
+    cursor: pointer;
+}
+
+div.awesuggest > ul.suggestions > li:hover {
+    background: hsl(200, 40%, 80%);
+    color: black;
+}
+
+div.awesuggest > ul.suggestions > li[aria-selected="true"] {
+    background: hsl(205, 40%, 40%);
+    color: white;
+}
+
+div.awesuggest em {
+    background: hsl(65, 100%, 50%);
+    font-style: normal;
+}
+
+div.awesuggest li:hover em {
+    background: hsl(68, 101%, 41%);
+}
+
+div.awesuggest li[aria-selected="true"] em {
+    background: hsl(86, 102%, 21%);
+    color: inherit;
+}
