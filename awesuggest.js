@@ -335,15 +335,16 @@
         // Strip HTML tags, commas, quotation marks and newlines
         value = value.replace(/(<([^>]+)>|,|"|\r\n|\n|\r)/ig, "");
 
-        valArray.push(value);
-        this.hiddenInput.setValue(valArray.join(", "));
+        if (value !== "") {
+            valArray.push(value);
+            this.hiddenInput.setValue(valArray.join(", "));
 
-        this.selection(value);
-        this.input.setValue("");
+            this.selection(value);            
+            $.fire(this.input, "awesuggest-addcomplete");
+        }
 
         this.close();
-        $.fire(this.input, "awesuggest-addcomplete");
-
+        this.input.setValue("");
         this.input.focus();
     };
 
