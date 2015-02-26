@@ -1,7 +1,5 @@
 # Awesuggest
 
-http://heldinz.github.io/awesuggest/
-
 Awesuggest is a customizable autocomplete widget extending Lea Verou's Awesomplete to combine functionality from Drew Wilson's jQuery AutoSuggest plugin, packaged as a Prototype plugin for older browsers. (Yes, some of us poor souls still need to support IE8 and can't get away from Prototype.)
 
 
@@ -69,8 +67,6 @@ Awesuggest is released under the MIT License. See [LICENSE][1] file for
 details.
 
 ## Links
-
-The official site for the library is at <http://heldinz.github.io/awesuggest/>.
 
 Munged together by Alice Rose, piggybacking off Lea Verou, Drew Wilson and other fantastic contributors.
 
