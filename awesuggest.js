@@ -24,6 +24,7 @@
     };
 
 
+
     $.create = function(tag, o) {
         var element = document.createElement(tag);
 
@@ -232,7 +233,7 @@
                 li = evt.findElement('li');
             if (btn) {
                 var parent = btn.up("li"),
-                    text = parent.innerText.slice(2),
+                    text = getTextContent(parent).slice(2),
                     valArray = getValsAsArray($F(me.hiddenInput)),
                     idx = valArray.indexOf(text);
 
@@ -307,17 +308,17 @@
             var prevented;
 
             $.fire(this.input, "awesuggest-select", {
-                text: selected.innerText,
+                text: getTextContent(selected),
                 preventDefault: function () {
                     prevented = true;
                 }
             });
 
             if (!prevented) {
-                this.selection(selected.innerText);
+                this.selection(getTextContent(selected));
 
                 var valArray = getValsAsArray($F(this.hiddenInput));
-                valArray.push(selected.innerText);
+                valArray.push(getTextContent(selected));
 
                 this.hiddenInput.setValue(valArray.join(", "));
                 this.input.setValue("");
@@ -339,7 +340,7 @@
             valArray.push(value);
             this.hiddenInput.setValue(valArray.join(", "));
 
-            this.selection(value);            
+            this.selection(value);
             $.fire(this.input, "awesuggest-addcomplete");
         }
 
@@ -350,7 +351,7 @@
 
     _.prototype.removeSelected = function() {
         var selected = this.selections.select("li[aria-selected=true]").first(),
-            text = selected.innerText.slice(2),
+            text = getTextContent(selected).slice(2),
             valArray = getValsAsArray($F(this.hiddenInput)),
             idx = valArray.indexOf(text);
 
@@ -412,6 +413,13 @@
             return [values]
         }
         return [];
+    }
+
+    function getTextContent (el) {
+      if (el.textContent) {
+        return el.textContent.trim();
+      }
+      return el.innerText;
     }
 
     function init() {
