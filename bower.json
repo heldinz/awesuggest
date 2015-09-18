@@ -5,7 +5,7 @@
     "./awesuggest.css",
     "./awesuggest.js"
   ],
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/heldinz/awesuggest",
   "authors": [
     "Lea Verou <>",
